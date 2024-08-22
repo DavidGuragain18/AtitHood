@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/AdobeStock_505799259_Video_HD_Preview.mov",
+      "PackagePath": "staticwebassets/image/AdobeStock_505799259_Video_HD_Preview.mov"
+    },
+    {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Animation - 1723973325160.gif",
       "PackagePath": "staticwebassets/image/Animation - 1723973325160.gif"
     },
@@ -29,16 +33,16 @@
       "PackagePath": "staticwebassets/image/Group_4-removebg-preview.png"
     },
     {
-      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/background.jpg",
-      "PackagePath": "staticwebassets/image/background.jpg"
-    },
-    {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/giphy-unscreen.gif",
       "PackagePath": "staticwebassets/image/giphy-unscreen.gif"
     },
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/google-removebg-preview.png",
       "PackagePath": "staticwebassets/image/google-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/mission-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/mission-removebg-preview.png"
     },
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/login.css",

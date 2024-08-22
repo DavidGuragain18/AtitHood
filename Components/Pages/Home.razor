@@ -41,7 +41,7 @@
     .nav-button {
         background: none;
         border: none;
-        color: # #D9D9D9;
+        color: #001f53;
         font-size: 16px;
         cursor: pointer;
         text-decoration: none;
@@ -49,8 +49,9 @@
     }
 
     .nav-button:hover {
-        background-color: #b0afaf;
-        border-radius: 5px;
+        background-color: #001f53;
+        color: #ffffff;
+        border-radius: 10px;
     }
 
     .notification {
@@ -67,8 +68,9 @@
     }
 
     .notification-icon:hover {
-        background-color: #b0afaf;
-        border-radius: 5px;
+        background-color: #001f53;
+        color: #ffffff; 
+        border-radius: 10px;
     }
 
     .notification-badge {
@@ -150,7 +152,7 @@
         color: #001f53;
         padding: 10px 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         font-size: 1rem;
         cursor: pointer;
         text-align: center;
@@ -160,16 +162,22 @@
     .button-primary:hover {
         background-color: #b0afaf;
     }
+    .active{
+        background-color: #001f53;
+        color:#ffffff;
+        border-radius: 10px;
+        }
+      
 </style>
 
 <div class="header">
     <img src="/image/giphy-unscreen.gif" alt="Logo" />
 
     <div class="nav-menu">
-        <button class="nav-button" @onclick="NavigateToHome">Home</button>
-        <button class="nav-button" @onclick="NavigateToAbout">About Us</button>
-        <button class="nav-button" @onclick="NavigateToContact">Contact</button>
-        <button class="nav-button" @onclick="NavigateToSignup">Sign Up</button>
+         <button class="nav-button @(location == 1 ? "active":"" )" @onclick="()=> navigateToggle(1)">Home</button>
+        <button class="nav-button @(location == 2 ? "active":"" )" @onclick="()=> navigateToggle(2)">About Us</button>
+        <button class="nav-button @(location == 3 ? "active":"" )" @onclick="()=> navigateToggle(3)">Contact</button>
+        <button class="nav-button @(location == 4 ? "active":"" )" @onclick="()=> navigateToggle(4)">Sign Up</button>
         <div class="notification">
             <button class="notification-icon">
                 <i class="fas fa-bell"></i>
@@ -217,11 +225,30 @@
 </div>
 
 @code {
+    public int location {get;set;} = 1;
     private void NavigateToHome()
     {
         Navigation.NavigateTo("/home");
+        
     }
 
+private async Task navigateToggle(int loc)
+{
+    if(loc == 1){
+       Navigation.NavigateTo("/"); 
+       
+    }
+     else if(loc == 2){
+Navigation.NavigateTo("/about");
+    }
+    else if(loc == 3){
+Navigation.NavigateTo("/contact");
+    }
+    else if(loc == 4){
+Navigation.NavigateTo("/signup");
+    }
+    location = loc;
+}
     private void NavigateToAbout()
     {
         Navigation.NavigateTo("/about");

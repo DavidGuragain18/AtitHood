@@ -1,0 +1,317 @@
+@page "/about"
+@using BlazorApp.Models
+@inject NavigationManager Navigation
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background color: #001f53;
+        background-size: cover;
+    }
+
+    .header {
+        z-index: 100;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        color: #001f53;
+        padding: 15px 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .header img {
+        height: 30px;
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-button {
+        background: none;
+        border: none;
+        color: #001f53;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .nav-button:hover {
+        background-color: #001f53;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .notification {
+        position: relative;
+    }
+
+    .notification-icon {
+        background: none;
+        border: none;
+        color: #001f53;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .notification-icon:hover {
+        background-color: #001f53;
+        color: #ffffff; 
+        border-radius: 10px;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: #001f53;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+     .active{
+        background-color: #001f53;
+        color:#ffffff;
+        border-radius: 10px;
+        }
+     .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 1rem;
+    }
+    .about-us-page {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    .about-header p {
+        font-size: 1.25rem;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    .about-mission, .about-story {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .about-mission .mission-image, .about-story .story-image {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .about-mission .mission-content, .about-story .story-content {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .about-mission h2, .about-story h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .about-mission p, .about-story p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .about-numbers {
+        text-align: center;
+        background-color: #f7f7f7;
+        padding: 40px;
+        margin-bottom: 60px;
+    }
+
+    .about-numbers h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 40px;
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        width: 30%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .stat-item img {
+        max-width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .stat-item p {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .stat-item a {
+        font-size: 1rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .stat-item a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="header">
+    <img src="/image/giphy-unscreen.gif" alt="Logo" />
+
+    <div class="nav-menu">
+         <button class="nav-button @(location == 1 ? "active":"" )" @onclick="()=> navigateToggle(1)">Home</button>
+        <button class="nav-button @(location == 2 ? "active":"" )" @onclick="()=> navigateToggle(2)">About Us</button>
+        <button class="nav-button @(location == 3 ? "active":"" )" @onclick="()=> navigateToggle(3)">Contact</button>
+        <button class="nav-button @(location == 4 ? "active":"" )" @onclick="()=> navigateToggle(4)">Sign Up</button>
+        <div class="notification">
+            <button class="notification-icon">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+ <div class="about-us-page">
+    <section class="about-header">
+        <h1>About Us</h1>
+        <p>
+            [Your Company]'s company and culture are like our product. They're cohesive, not cobbled, for a delightful experience.
+        </p>
+    </section>
+
+    <section class="about-mission">
+        <div class="mission-image">
+           <source src="/image/AdobeStock_505799259_Video_HD_Preview.mov" type="video/mp4">
+        </div>
+        <div class="mission-content">
+            <h2>Our Mission: Helping Millions of Organizations Grow Better</h2>
+            <p>
+                We believe that your company began to help you grow better. And growing better means delighting the success of your own business with the success of your customers. Welcome!
+            </p>
+        </div>
+    </section>
+
+    <section class="about-story">
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>
+                In [Year], [Founders' Names] met as students at [School Name] and dreamed about a better way to grow. With a plan to disrupt how businesses approach their customers, they founded [Company Name]. 
+                Fast forward to today, and their vision is now being realized. Our software helps organizations worldwide achieve better growth, delight customers, and thrive in a competitive market.
+            </p>
+        </div>
+        <div class="story-image">
+            <img src="path-to-your-image.jpg" alt="Story Image" />
+        </div>
+    </section>
+
+    <section class="about-numbers">
+        <h2>By the Numbers</h2>
+        <div class="stats-container">
+            <div class="stat-item">
+                <img src="path-to-icon1.png" alt="Global Offices" />
+                <p>12 Global Offices</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="stat-item">
+                <img src="path-to-icon2.png" alt="Employees" />
+                <p>7,600+ Employees</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="stat-item">
+                <img src="path-to-icon3.png" alt="Customers" />
+                <p>205,000+ Customers</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    public int location {get;set;} = 1;
+    private void NavigateToHome()
+    {
+        Navigation.NavigateTo("/home");
+        
+    }
+
+private async Task navigateToggle(int loc)
+{
+    if(loc == 1){
+       Navigation.NavigateTo("/"); 
+       
+    }
+     else if(loc == 2){
+Navigation.NavigateTo("/about");
+    }
+    else if(loc == 3){
+Navigation.NavigateTo("/contact");
+    }
+    else if(loc == 4){
+Navigation.NavigateTo("/signup");
+    }
+    location = loc;
+}
+    private void NavigateToAbout()
+    {
+        Navigation.NavigateTo("/about");
+    }
+
+    private void NavigateToContact()
+    {
+        Navigation.NavigateTo("/contact");
+    }
+
+    private void NavigateToSignup()
+    {
+        Navigation.NavigateTo("/signup");
+    }
+}

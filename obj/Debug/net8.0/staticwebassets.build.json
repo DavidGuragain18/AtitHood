@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o7qP0yKhxHUHQGEH7QzTjXcMdcf/EdMukO0M+Sr4sNQ=",
+  "Hash": "rF+Rm1MfPN9xBRH/Sf0F12te7h2ETRoJEdJM1eqWdj0=",
   "Source": "BlazorApp",
   "BasePath": "_content/BlazorApp",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
+      "Identity": "/Users/davidguragain/AtitHood/wwwroot/image/AdobeStock_505799259_Video_HD_Preview.mov",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/davidguragain/AtitHood/wwwroot/",
+      "BasePath": "_content/BlazorApp",
+      "RelativePath": "image/AdobeStock_505799259_Video_HD_Preview.mov",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/image/AdobeStock_505799259_Video_HD_Preview.mov"
+    },
+    {
       "Identity": "/Users/davidguragain/AtitHood/wwwroot/image/Animation - 1723973325160.gif",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
@@ -148,25 +167,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/image/Animation - 1723973325160.gif"
-    },
-    {
-      "Identity": "/Users/davidguragain/AtitHood/wwwroot/image/background.jpg",
-      "SourceId": "BlazorApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/davidguragain/AtitHood/wwwroot/",
-      "BasePath": "_content/BlazorApp",
-      "RelativePath": "image/background.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/image/background.jpg"
     },
     {
       "Identity": "/Users/davidguragain/AtitHood/wwwroot/image/giphy-unscreen.gif",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/image/Group_4-removebg-preview.png"
+    },
+    {
+      "Identity": "/Users/davidguragain/AtitHood/wwwroot/image/mission-removebg-preview.png",
+      "SourceId": "BlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/davidguragain/AtitHood/wwwroot/",
+      "BasePath": "_content/BlazorApp",
+      "RelativePath": "image/mission-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/image/mission-removebg-preview.png"
     },
     {
       "Identity": "/Users/davidguragain/AtitHood/wwwroot/login.css",
