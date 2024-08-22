@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/davidguragain/AtitHood/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/BlazorApp.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Animation - 1723973325160.gif",
+      "PackagePath": "staticwebassets/image/Animation - 1723973325160.gif"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Group_4-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Group_4-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/background.jpg",
+      "PackagePath": "staticwebassets/image/background.jpg"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/giphy-unscreen.gif",
+      "PackagePath": "staticwebassets/image/giphy-unscreen.gif"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/google-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/google-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/login.css",
+      "PackagePath": "staticwebassets/login.css"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlazorApp.props",
+      "PackagePath": "build\\BlazorApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\BlazorApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlazorApp.props",
+      "PackagePath": "buildTransitive\\BlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
