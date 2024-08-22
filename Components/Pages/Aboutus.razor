@@ -91,24 +91,10 @@
         color:#ffffff;
         border-radius: 10px;
         }
-     .footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .footer p {
-        margin: 0;
-        font-size: 1rem;
-    }
     .about-us-page {
-        max-width: 1200px;
+        max-width: 100%;
         margin: auto;
-        padding: 20px;
+        padding: 30px;
         font-family: Arial, sans-serif;
     }
 
@@ -182,7 +168,7 @@
     }
 
     .stat-item img {
-        max-width: 50px;
+        max-width: 100px;
         margin-bottom: 10px;
     }
 
@@ -201,14 +187,28 @@
     .stat-item a:hover {
         text-decoration: underline;
     }
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 1rem;
+    }
 </style>
 
 <div class="header">
     <img src="/image/giphy-unscreen.gif" alt="Logo" />
 
     <div class="nav-menu">
-         <button class="nav-button @(location == 1 ? "active":"" )" @onclick="()=> navigateToggle(1)">Home</button>
-        <button class="nav-button @(location == 2 ? "active":"" )" @onclick="()=> navigateToggle(2)">About Us</button>
+         <button class="nav-button @(location == 2 ? "active":"" )" @onclick="()=> navigateToggle(1)">Home</button>
+        <button class="nav-button @(location == 1 ? "active":"" )" @onclick="()=> navigateToggle(2)">About Us</button>
         <button class="nav-button @(location == 3 ? "active":"" )" @onclick="()=> navigateToggle(3)">Contact</button>
         <button class="nav-button @(location == 4 ? "active":"" )" @onclick="()=> navigateToggle(4)">Sign Up</button>
         <div class="notification">
@@ -224,13 +224,18 @@
     <section class="about-header">
         <h1>About Us</h1>
         <p>
-            [Your Company]'s company and culture are like our product. They're cohesive, not cobbled, for a delightful experience.
+            Atit Hood's company and culture are like our product. They're cohesive, not cobbled, for a delightful experience.
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
+            its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+            to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and
+            web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many
+            web sites still in their infancy.
         </p>
     </section>
 
     <section class="about-mission">
         <div class="mission-image">
-           <source src="/image/AdobeStock_505799259_Video_HD_Preview.mov" type="video/mp4">
+           <img src="image/mission-removebg-preview.png" alt="Mission Image" />
         </div>
         <div class="mission-content">
             <h2>Our Mission: Helping Millions of Organizations Grow Better</h2>
@@ -244,12 +249,12 @@
         <div class="story-content">
             <h2>Our Story</h2>
             <p>
-                In [Year], [Founders' Names] met as students at [School Name] and dreamed about a better way to grow. With a plan to disrupt how businesses approach their customers, they founded [Company Name]. 
+                In 2077, Atit met as students at Sainek and dreamed about a better way to grow. With a plan to disrupt how businesses approach their customers, they founded Atit Hood. 
                 Fast forward to today, and their vision is now being realized. Our software helps organizations worldwide achieve better growth, delight customers, and thrive in a competitive market.
             </p>
         </div>
         <div class="story-image">
-            <img src="path-to-your-image.jpg" alt="Story Image" />
+            <img src="/image/Story-removebg-preview.png" alt="Story Image" />
         </div>
     </section>
 
@@ -257,22 +262,25 @@
         <h2>By the Numbers</h2>
         <div class="stats-container">
             <div class="stat-item">
-                <img src="path-to-icon1.png" alt="Global Offices" />
+                <img src="/image/paper-craft-design-globe-icon-removebg-preview.png" alt="Global Offices" />
                 <p>12 Global Offices</p>
-                <a href="#">Learn more</a>
+                <a href="">Learn more</a>
             </div>
             <div class="stat-item">
-                <img src="path-to-icon2.png" alt="Employees" />
+                <img src="/image/Screenshot_2024-08-22_at_3.10.39_PM-removebg-preview.png" alt="Employees" />
                 <p>7,600+ Employees</p>
-                <a href="#">Learn more</a>
+                <a href="">Learn more</a>
             </div>
             <div class="stat-item">
-                <img src="path-to-icon3.png" alt="Customers" />
+                <img src="/image/5881-removebg-preview.png" alt="Customers" />
                 <p>205,000+ Customers</p>
-                <a href="#">Learn more</a>
+                <a href="">Learn more</a>
             </div>
         </div>
     </section>
+</div>
+<div class="footer">
+    <p>&copy; 2024 Atit Hood. All rights reserved.</p>
 </div>
 
 @code {

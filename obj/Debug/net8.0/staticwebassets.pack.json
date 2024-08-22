@@ -21,8 +21,8 @@
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/AdobeStock_505799259_Video_HD_Preview.mov",
-      "PackagePath": "staticwebassets/image/AdobeStock_505799259_Video_HD_Preview.mov"
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/5881-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/5881-removebg-preview.png"
     },
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Animation - 1723973325160.gif",
@@ -31,6 +31,30 @@
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Group_4-removebg-preview.png",
       "PackagePath": "staticwebassets/image/Group_4-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Screenshot_2024-08-22_at_3.10.39_PM-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Screenshot_2024-08-22_at_3.10.39_PM-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Screenshot_2024-08-22_at_3.25.58_PM-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Screenshot_2024-08-22_at_3.25.58_PM-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Screenshot_2024-08-22_at_3.27.10_PM-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Screenshot_2024-08-22_at_3.27.10_PM-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Screenshot_2024-08-22_at_3.28.27_PM-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Screenshot_2024-08-22_at_3.28.27_PM-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Screenshot_2024-08-22_at_3.31.43_PM-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Screenshot_2024-08-22_at_3.31.43_PM-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/Story-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/Story-removebg-preview.png"
     },
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/giphy-unscreen.gif",
@@ -43,6 +67,10 @@
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/image/mission-removebg-preview.png",
       "PackagePath": "staticwebassets/image/mission-removebg-preview.png"
+    },
+    {
+      "Id": "/Users/davidguragain/AtitHood/wwwroot/image/paper-craft-design-globe-icon-removebg-preview.png",
+      "PackagePath": "staticwebassets/image/paper-craft-design-globe-icon-removebg-preview.png"
     },
     {
       "Id": "/Users/davidguragain/AtitHood/wwwroot/login.css",

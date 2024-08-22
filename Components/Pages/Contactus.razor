@@ -1,0 +1,316 @@
+@page "/contact"
+@using BlazorApp.Models
+@inject NavigationManager Navigation
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKVB1lYe91/6iLY36N2h3BicX2iP7D9FF5S5eN6J3tn4Hmc8RmM6EC9eRZxQmC4oL3/4q9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background color: #001f53;
+        background-size: cover;
+    }
+
+    .header {
+        z-index: 100;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        color: #001f53;
+        padding: 15px 20px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .header img {
+        height: 30px;
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-button {
+        background: none;
+        border: none;
+        color: #001f53;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .nav-button:hover {
+        background-color: #001f53;
+        color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .notification {
+        position: relative;
+    }
+
+    .notification-icon {
+        background: none;
+        border: none;
+        color: #001f53;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .notification-icon:hover {
+        background-color: #001f53;
+        color: #ffffff; 
+        border-radius: 10px;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: #001f53;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+     .active{
+        background-color: #001f53;
+        color:#ffffff;
+        border-radius: 10px;
+        }
+
+    .contact-page {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .contact-form {
+        width: 50%;
+        height: fit-content;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        border-right: 1px solid #ccc;
+    }
+
+    .back-link {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .contact-form h1 {
+        margin-bottom: 20px;
+        color: #1a237e;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    .btn-submit {
+        padding: 10px 20px;
+        background-color: #1a237e;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .btn-submit:hover {
+        background-color: #0d183a;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+
+    .social-media p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .social-media a {
+        margin-right: 15px;
+        font-size: 1.5rem;
+        color: #1a237e;
+        text-decoration: none;
+    }
+
+    .social-media a:hover {
+        color: #0d183a;
+    }
+
+    .contact-map {
+        width: 50%;
+        position: sticky;
+        height: 85%;
+    }
+
+    .contact-info {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background: #1a237e;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .contact-info p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .contact-info p i {
+        margin-right: 10px;
+    }
+     .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 1rem;
+    }
+</style>
+
+<div class="header">
+    <img src="/image/giphy-unscreen.gif" alt="Logo" />
+
+    <div class="nav-menu">
+         <button class="nav-button @(location == 3 ? "active":"" )" @onclick="()=> navigateToggle(1)">Home</button>
+        <button class="nav-button @(location == 2 ? "active":"" )" @onclick="()=> navigateToggle(2)">About Us</button>
+        <button class="nav-button @(location == 1 ? "active":"" )" @onclick="()=> navigateToggle(3)">Contact</button>
+        <button class="nav-button @(location == 4 ? "active":"" )" @onclick="()=> navigateToggle(4)">Sign Up</button>
+        <div class="notification">
+            <button class="notification-icon">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="contact-page">
+    <div class="contact-form">
+        <h1>CONTACT US</h1>
+        <form>
+            <div class="form-group">
+                <label for="fullName"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fullName" class="form-control" placeholder="Full Name" />
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <label for="message"><i class="fa fa-comment"></i> Message</label>
+                <textarea id="message" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Contact Us</button>
+        </form>
+        <div class="social-media">
+            <p>Follow us on</p>
+            <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14129.12908618886!2d85.30691893487667!3d27.6871769316899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1983e0e1e9c1%3A0x27a2e3ad1586d4bc!2sKathmandu!5e0!3m2!1sen!2snp!4v1616678667676!5m2!1sen!2snp" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
+        <div class="contact-info">
+            <p><i class="fa fa-envelope"></i> gmail123@gmail.com</p>
+            <p><i class="fa fa-map-marker"></i> BujaliiBazar, Kathmandu</p>
+        </div>
+    </div>
+</div>
+@code {
+    public int location {get;set;} = 1;
+    private void NavigateToHome()
+    {
+        Navigation.NavigateTo("/home");
+        
+    }
+
+private async Task navigateToggle(int loc)
+{
+    if(loc == 1){
+       Navigation.NavigateTo("/"); 
+       
+    }
+     else if(loc == 2){
+Navigation.NavigateTo("/about");
+    }
+    else if(loc == 3){
+Navigation.NavigateTo("/contact");
+    }
+    else if(loc == 4){
+Navigation.NavigateTo("/signup");
+    }
+    location = loc;
+}
+    private void NavigateToAbout()
+    {
+        Navigation.NavigateTo("/about");
+    }
+
+    private void NavigateToContact()
+    {
+        Navigation.NavigateTo("/contact");
+    }
+
+    private void NavigateToSignup()
+    {
+        Navigation.NavigateTo("/signup");
+    }
+}
